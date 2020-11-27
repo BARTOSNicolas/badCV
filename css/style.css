@@ -1,0 +1,512 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* FIN DU RESET CSS */
+
+html, body{
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 20px;
+  position: relative;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h2{
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+button{
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  transition: 250ms;
+  margin-bottom: 30px;
+}
+button:hover{
+  background-color: white;
+  color: #711D2E;
+}
+/* HEADER NAV */
+header nav{
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #711D2E;
+	font-family: 'Orbitron', sans-serif;
+}
+nav li a{
+  color: white;
+  text-decoration: none;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+}
+nav li{
+    padding: 16px;
+    transition: 250ms;
+    border-bottom: #125670 solid 5px;
+}
+nav li{
+  position: relative;
+}
+nav li:after{
+	z-index: -1;
+	content:"";
+	height: 70px;
+	position: absolute;
+	top: -100px;left: 0;right: 0;
+	background-color: #125670;
+	transition: 250ms;
+}
+nav li:hover:after{
+	top: 0;
+}
+
+/* HOME */
+#home{
+  height: 500px;
+  background-image: url("../img/code.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-color: #125670;
+  position: relative;
+
+}
+#home .blend{
+  position: absolute;
+  top: 0; left: 0;right: 0;
+  height: 500px;
+  background-color: #125670;
+  mix-blend-mode: overlay;
+}
+#home .title{
+  font-size: 120px;
+  font-weight: 700;
+  position: absolute;
+  bottom: -17px;
+  color: #711D2E;
+}
+#home .subtitle{
+  font-size: 44px;
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  bottom: -44px;
+  color: white;
+  font-style: italic;
+}
+/* ABOUT */
+#about{
+  background-color: #711D2E;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: white;
+}
+#about .container{
+  position: relative;
+}
+#about .about-photo{
+  position: absolute;
+  right: 50px;
+  top: -170px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #711D2E;
+  background-color: white;
+}
+.about-photo img{
+  width: 100%;
+}
+#about .about-row, #skills .skills-row{
+  display: flex;
+}
+.about-left, .about-right, .skills-left, .skills-right{
+  width: 50%;
+  padding: 0 8px;
+}
+.about-right{
+  padding-left: 100px;
+
+}
+.about-right .icon img{
+  width: 16px;
+}
+.about-right ol li{
+  margin-bottom: 8px;
+}
+/* SKILLS */
+#skills{
+  background-color: #711D2E;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+}
+.skill{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-bottom: 16px;
+}
+.skill .skill-icon{
+  text-align: center;
+  width: 50px;
+  height: 60px;
+  margin-right: 10px;
+  position: relative;
+}
+.skill-icon svg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.skill .skill-text{
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  width: calc(85%);
+}
+
+.skill-text{
+padding-top: 15px;
+}
+.skill-text .skill-bar{
+  background-color: white;
+  border-radius: 4px;
+}
+.skill-text .skill-progress{
+  text-align: right;
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+  padding-right: 5px;
+  background-color: #125670;
+  border-radius: 4px 0 0 4px;
+}
+/* EXPERIENCES PRO */
+#exp{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#exp h2{
+  color: #711D2E;
+}
+#exp table .col1{
+  text-align: right;
+  width: 150px;
+  padding-right: 16px;
+}
+#exp table .col2{
+  width: 900px;
+}
+#exp .exp-date{
+  padding-top: 25px;
+  color: #125670;
+  font-weight: 700;
+}
+#exp .exp-where{
+  color:#711D2E;
+  font-weight: 700;
+}
+#exp .exp-who{
+  color:#711D2E;
+  font-style: italic;
+}
+#exp .exp-text{
+  padding-bottom: 25px;
+  border-bottom: 1px solid #711D2E;
+}
+/* HOOBIES */
+#hobbies{
+  background-color: #711D2E;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+}
+#hobbies .hobbies-row{
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hobbies .icon{
+  width: 64px;
+}
+#hobbies a{
+  align-items: center;
+  color: white;
+  transition: 250ms;
+  text-decoration: none;
+}
+#hobbies a:hover{
+  color: #125670;
+}
+/* FOOTER */
+footer{
+  background-color: #125670;
+  padding: 16px 0;
+}
+footer .social{
+  display: flex;
+  justify-content: center;
+}
+footer .icon{
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+footer a{
+  color: white;
+  transition: 250ms;
+}
+footer a:hover{
+  color: #711D2E;
+}
+
+
+/* PAGE HOBBIES */
+#home.home-hobbies{
+  background-image: url("../img/salsa.jpg");
+}
+#hobby {
+  background-color: #711D2E;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+  min-height: 600px;
+  position: relative;
+}
+#hobby .background-svg{
+  position: absolute;
+  bottom: 0;right: 10%;
+  width: 35%;
+  color: white;
+  opacity: 0.35;
+}
+#hobby .danses-row{
+  display: flex;
+  margin: 0 8px;
+  margin-bottom: 60px;
+}
+#hobby .danses-left, #hobby .danses-right{
+  width: 50%;
+  position: relative;
+  z-index: 2;
+}
+#hobby iframe{
+	width: 100%;
+}
+/* PAGE CONTACT */
+#home.home-contact{
+  background-image: url("../img/mail.jpg");
+}
+#contact{
+  background-color: #711D2E;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  color: white;
+}
+#contact .label-32{
+  margin-bottom: 32px;
+}
+#contact .input-32{
+  margin-bottom: 32px;
+}
+#contact form{
+  display: flex;
+  margin-bottom: 80px;
+}
+#contact .form-label{
+  width: 25%;
+  text-align: right;
+  padding-right: 16px;
+}
+#contact .form-input{
+  width: 50%;
+}
+#contact .btn-radio{
+  height: 22px;
+  width: auto;
+}
+#contact label{
+  display: block;
+  height: 26px;
+  margin-bottom: 8px;
+}
+#contact input{
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 20px;
+  color: white;
+  display: block;
+  height: 25px;
+  width: 100%;
+  margin-bottom: 8px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  transition: 250ms;
+}
+#contact input:focus{
+  color: #125670;
+  border-bottom: solid 1px #125670;
+  background-color: #fff;
+  outline: none;
+}
+#contact input::placeholder{
+  color: #125670;
+}
+#contact textarea{
+  font-family: 'Advent Pro', sans-serif;
+  padding: 0 4px;
+  font-size: 20px!important;
+  width: 100%;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: 250ms;
+}
+#contact textarea:focus{
+  color: #125670;
+  border: solid 1px #125670;
+  outline: none;
+  background-color: #fff;
+}
+#contact textarea::placeholder{
+  color: #125670;
+}
+#contact select{
+  color: white;
+  padding: 4px 8px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+#contact option{
+  background-color: #711D2E;
+}
+#contact .form-btn{
+  width: calc(100% + 10px);
+  padding-top: 4px;
+  display: flex;
+  justify-content: flex-end;
+}
+#contact .btn-reset{
+  width: 100px;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 1200px){
+	.container{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#home .title{
+    font-size: 50px;
+    bottom: -7px;
+  }
+  #home .subtitle{
+    font-size: 18px;
+    bottom: -20px;
+  }
+}
+
+
+@media screen and (max-width: 640px){
+  .div-btn-retour{
+    text-align: center;
+  }
+  #home .title{
+    font-size: 50px;
+    bottom: -7px;
+  }
+  #home .subtitle{
+    font-size: 18px;
+    bottom: -20px;
+  }
+  #about .about-photo{
+    top: -350px;
+    right: calc(50% - 100px);
+  }
+  #about .about-row, #skills .skills-row{
+    display: block;
+  }
+  #about .about-left, #about .about-right{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #skills, #about, #exp, #hobbies{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #skills .skills-left, #skills .skills-right{
+    width: 100%;
+  }
+  #hobbies .hobbies-row{
+    flex-wrap: wrap;
+  }
+  #hobby .danses-row{
+    display: block;
+  }
+  #hobby .danses-left, #hobby .danses-right{
+    width: 100%;
+  }
+  #hobby .danses-left{
+    margin-bottom: 30px;
+  }
+}
